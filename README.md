@@ -1,1 +1,1 @@
-# AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps
+# Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps
