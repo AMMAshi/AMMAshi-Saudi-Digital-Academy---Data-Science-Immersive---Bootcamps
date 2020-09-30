@@ -285,6 +285,7 @@ ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) +
 # geom_jitter spread the point vertically and horizontally to remove the overlapping problem.
 
 # Q4- What’s the default position adjustment for geom_boxplot()? Create a visualisation of the mpg dataset that demonstrates it.
+# The default position adjustment for geom_boxplot() is dodge.
 ggplot(data = mpg,mapping = aes(x = cty, y = hwy)) +
   geom_boxplot(mapping = aes(color = drv))
   
