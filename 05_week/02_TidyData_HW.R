@@ -456,11 +456,11 @@ View(weather)
     select(origin = origin, arr_time=time_hour,dewp:wind_gust)%>%
     left_join(flights_dt, by=c("arr_time","origin"))%>%  
     select(origin:dest,arr_delay)%>%
-    filter(dest!="NA")%>%
+    filter(!is.na(dest))%>%
     pivot_longer(dewp:wind_gust, names_to="weather_condition",values_to="condition",values_drop_na = TRUE)%>%
     ggplot(aes(x=dest,y=arr_delay,color=weather_condition))+
     geom_point(aes(group=weather_condition)))
-# The weather conditions that make it more likely to see a delay, are wind_gust and wind_speed.
+# The weather conditions make it more likely to see a delay are wind_gust and wind_speed
 
 # Q5- What happened on June 13 2013? Display the spatial pattern of delays, and then use Google to cross-reference with the weather.
 # Answer:
@@ -470,7 +470,7 @@ View(weather)
     select(origin = origin, arr_time=time_hour,dewp:wind_gust)%>%
     left_join(flights_dt, by=c("arr_time","origin"))%>%  
     select(origin:dest,arr_delay)%>%
-    filter(dest!="NA")%>%
+    filter(!is.na(dest))%>%
     filter(arr_time == "2013-06-13")%>%
     pivot_longer(dewp:wind_gust, names_to="weather_condition",values_to="condition",values_drop_na = TRUE)%>% nrow())
 # On June 13 2013, no flight in the record!
@@ -480,21 +480,61 @@ View(weather)
 #--------------------------------------------------
 # Q1- What does it mean for a flight to have a missing tailnum? What do the tail numbers that don’t have a matching record in planes have in common? (Hint: one variable explains ~90% of the problems.)
 # Answer:
+(flight_missing_tailnum<-flights %>%
+   anti_join(planes, by = "tailnum") %>%
+   count(tailnum, sort = TRUE))
+
+(flights %>% 
+    filter(is.na(tailnum)))
+# when the tailnum = NA then arr_time = NA that indcates the flight is canceled. 
 
 # Q2- Filter flights to only show flights with planes that have flown at least 100 flights.
 # Answer:
+View(flights %>%
+    count(tailnum, sort = TRUE)%>%
+    filter(n>=100,!is.na(tailnum))%>%
+    left_join(flights, by="tailnum"))
 
 # Q3- Combine fueleconomy::vehicles and fueleconomy::common to find only the records for the most common models.
 # Answer:
+library(fueleconomy)
+View(vehicles)
+View(common)
+(vehicles %>%
+  semi_join(common, by=c("make","model")))
 
 # Q4- Find the 48 hours (over the course of the whole year) that have the worst delays. Cross-reference it with the weather data. Can you see any patterns?
 # Answer:
+(weather_delay_table<- weather %>%
+  select(origin = origin, arr_time=time_hour,dewp:wind_gust)%>%
+  left_join(flights_dt, by=c("arr_time","origin"))%>%  
+  select(origin:dest,arr_delay)%>%
+  filter(!is.na(dest))%>%
+  pivot_longer(dewp:wind_gust, names_to="weather_condition",values_to="condition",values_drop_na = TRUE)%>%
+  filter(arr_delay>=48))
 
 # Q5- What does anti_join(flights, airports, by = c("dest" = "faa")) tell you? What does anti_join(airports, flights, by = c("faa" = "dest")) tell you?
 # Answer:
+anti_join(flights, airports, by = c("dest" = "faa"))
+# Dest flights that don’t have a match in airports
+anti_join(airports, flights, by = c("faa" = "dest"))
+# Dest airports don’t have a match in flights
 
 # Q6- You might expect that there’s an implicit relationship between plane and airline, because each plane is flown by a single airline. Confirm or reject this hypothesis using the tools you’ve learned above.
 # Answer:
+View(flights)
+View(airlines)
+View(airports)
+View(planes)
+View(weather)
+
+View(flights %>%
+  left_join(airlines, by="carrier") %>%
+  left_join(planes, by="tailnum")%>%
+  filter(is.na(type))%>%
+  select(carrier,name,tailnum, year.y:engine))
+
+# There is an implicit relationship between plane and airline but since there are missing tailnum due to cancelation. There is missing info i.e. is.na(type).
 
 
 
