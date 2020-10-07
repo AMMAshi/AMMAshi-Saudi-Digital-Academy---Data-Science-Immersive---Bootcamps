@@ -451,9 +451,29 @@ View(planes)
 
 # Q4- What weather conditions make it more likely to see a delay?
 # Answer:
+View(weather)
+(weather_delay_table<- weather %>%
+    select(origin = origin, arr_time=time_hour,dewp:wind_gust)%>%
+    left_join(flights_dt, by=c("arr_time","origin"))%>%  
+    select(origin:dest,arr_delay)%>%
+    filter(dest!="NA")%>%
+    pivot_longer(dewp:wind_gust, names_to="weather_condition",values_to="condition",values_drop_na = TRUE)%>%
+    ggplot(aes(x=dest,y=arr_delay,color=weather_condition))+
+    geom_point(aes(group=weather_condition)))
+# The weather conditions that make it more likely to see a delay, are wind_gust and wind_speed.
 
 # Q5- What happened on June 13 2013? Display the spatial pattern of delays, and then use Google to cross-reference with the weather.
 # Answer:
+# From June 12 to June 13, 2013, two derechos occurred across different areas of the Eastern United States. 
+(flights_dt_new <- flights_dt %>% filter(arr_time == "2013-06-13")%>% nrow())
+(weather_delay_table<- weather %>%
+    select(origin = origin, arr_time=time_hour,dewp:wind_gust)%>%
+    left_join(flights_dt, by=c("arr_time","origin"))%>%  
+    select(origin:dest,arr_delay)%>%
+    filter(dest!="NA")%>%
+    filter(arr_time == "2013-06-13")%>%
+    pivot_longer(dewp:wind_gust, names_to="weather_condition",values_to="condition",values_drop_na = TRUE)%>% nrow())
+# On June 13 2013, no flight in the record!
 
 #--------------------------------------------------
 # 13.5.1 Exercises
