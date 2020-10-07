@@ -405,12 +405,49 @@ View(Fielding)       # playerID, yearID, teamID, IgID, stint
 #(Don’t worry if you don’t understand what semi_join() does — you’ll learn about it next.)
 # You might want to use the size or colour of the points to display the average delay for each airport.
 # Answer:
+flights %>% 
+  select(year, month, day, hour, minute) %>% 
+  mutate(departure = make_datetime(year, month, day, hour, minute))
+
+make_datetime_100 <- function(year, month, day, time) {
+  make_datetime(year, month, day, time %/% 100, time %% 100)
+}
+
+(flights_dt <- flights %>% 
+  filter(!is.na(dep_time), !is.na(arr_time)) %>% 
+  mutate(
+    dep_time = make_datetime_100(year, month, day, dep_time),
+    arr_time = make_datetime_100(year, month, day, arr_time),
+    sched_dep_time = make_datetime_100(year, month, day, sched_dep_time),
+    sched_arr_time = make_datetime_100(year, month, day, sched_arr_time)
+  ) %>% 
+  select(origin, dest, ends_with("delay"), ends_with("time"),tailnum))
+
+flights_dt %>% 
+  ggplot(aes(dep_delay)) + 
+  geom_freqpoly(binwidth = 86400) # 86400 seconds = 1 day
+
+(airport_delay_table<- airports %>% 
+    select(origin = faa, O_Latitude=lat, O_Longitude=lon) %>%
+    semi_join(flights_dt, by="origin")%>%
+    ggplot(aes(O_Longitude, O_Latitude)) +
+    borders("state") +
+    geom_point() +
+    coord_quickmap())
 
 # Q2- Add the location of the origin and destination (i.e. the lat and lon) to flights.
 # Answer:
+(airport_delay_table<- airports %>% 
+  select(origin = faa, O_Latitude=lat, O_Longitude=lon) %>%
+  inner_join(flights_dt, by="origin"))
 
 # Q3- Is there a relationship between the age of a plane and its delays?
 # Answer:
+View(planes)
+(plane_age_delay_table<- planes %>% 
+    inner_join(flights_dt, by="tailnum")%>%
+    select(tailnum,year,type,arr_delay))
+# it seems like there is no relationship, maybe delays and distance!
 
 # Q4- What weather conditions make it more likely to see a delay?
 # Answer:
