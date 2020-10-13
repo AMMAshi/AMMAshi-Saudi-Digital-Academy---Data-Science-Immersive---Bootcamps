@@ -1,5 +1,5 @@
 # ========================================
-# Arwa Ashi HW 1 week 6 Oct 12, 2020
+# Arwa Ashi - HW 1 week 6 - Oct 12, 2020
 # ========================================
 # Joint Probability      : Probability of events A intersection B.
 # Marginal Probability   : Probability of event A.
@@ -25,7 +25,7 @@ prob_cal <- function(prob_A= 0.1, prob_B_given_A = 0.9, prob_B_given_Anot = 0.1)
     "prop_Anot" , 1 - prop_A,
     
     # Conditional Probability
-    "prob_Bnot_given_A"   ,     1 - prob_B_given_A,
+    "prob_Bnot_given_A"   ,  1 - prob_B_given_A,
     "prob_Bnot_given_Anot",  1 - prob_B_given_Anot,
     
     # Joint Probability
