@@ -68,7 +68,7 @@ sol<-lp("max",f.obj,f.col,f.dir,f.rhs,compute.sens = T)
 sol$objval
 sol$solution
 
-# undrestading the dual help you undrestand the shadow prices
+# Understanding the dual help you understand the shadow prices
 sol$duals
 
 # -------------------------------------------------------------- 
