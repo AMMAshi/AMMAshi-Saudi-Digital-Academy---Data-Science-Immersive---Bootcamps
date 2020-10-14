@@ -40,7 +40,9 @@
 # Fourth : build a matrix fucntion:
 
 library(lpSolve)
+
 f.obj <- c(13,23,30)
+
 f.col <- matrix(c(5,10,20,      # Hours
                   3, 1, 1,      # Employee
                   4, 4, 4,      # Hops
@@ -48,6 +50,7 @@ f.col <- matrix(c(5,10,20,      # Hours
                  35,20,15),     # Malt  
                 nrow  = 5, 
                 byrow = T)
+
 f.dir <- c("<=",
            "<=",
            "<=",
