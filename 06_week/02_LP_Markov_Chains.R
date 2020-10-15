@@ -22,7 +22,7 @@
 
 # Answer:
 # ----------------------|----------|-------|---------------|-----------|------|------|------  
-# Products              | varibale | Price | Hour of Labor | employees | Hops | Corn | Malt
+# Products              | variable | Price | Hour of Labor | employees | Hops | Corn | Malt
 # ----------------------|----------|-------|---------------|-----------|------|------|------ 
 # Hopatronic            | x_1      | $ 13  | 5  hours      | 1         | 4    | 5    | 35
 # American Kolsch style | x_2      | $ 23  | 10 hours      | 1         | 4    | 15   | 20
