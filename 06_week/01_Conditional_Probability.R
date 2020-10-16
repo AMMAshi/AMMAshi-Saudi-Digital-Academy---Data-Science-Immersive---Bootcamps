@@ -17,26 +17,31 @@ library(tidyverse)
 # Conditional Probability: Probability of event B given event A & Probability of event Bnot given event A.
 
 prob_cal <- function(prob_A= 0.1, prob_B_given_A = 0.9, prob_B_given_Anot = 0.1){
+  
+  prob_Anot = 1 - prob_A
+  prob_Bnot_given_Anot = 1 - prob_B_given_Anot
+  
   #  calculates the all the conditionals, marginals and joints
   Prob_cal <- tribble(
     ~prob               ,    ~value,
     #-------------------|-------------
     # Marginal Probability
-    "prop_Anot" , 1 - prop_A,
+    "prob_Anot" , 1 - prob_A,
     
     # Conditional Probability
     "prob_Bnot_given_A"   ,  1 - prob_B_given_A,
     "prob_Bnot_given_Anot",  1 - prob_B_given_Anot,
     
     # Joint Probability
-    "prob_AinB"       , prob_B_given_A * prop_A,
-    "prob_AinBnot"    , prob_B_given_Anot * prop_A,
-    "prob_AnotinB"    , prob_B_given_Anot * prop_Anot,
-    "prob_AnotinBnot" , prob_Bnot_given_Anot * prop_Anot
+    "prob_AinB"       , prob_B_given_A * prob_A,
+    "prob_AinBnot"    , prob_B_given_Anot * prob_A,
+    "prob_AnotinB"    , prob_B_given_Anot * prob_Anot,
+    "prob_AnotinBnot" , prob_Bnot_given_Anot * prob_Anot
     
   )
   return(Prob_cal)
 }
+
 prob_cal(prob_A= 0.1, prob_B_given_A = 0.9, prob_B_given_Anot = 0.1)
 
 # -------------------------------------------------
