@@ -1,5 +1,5 @@
 # --------------------------------------------------
-# Arwa Ashi - Homework 3 week 5 - Oct 14, 2020
+# Arwa Ashi - Homework 3 week 6 - Oct 14, 2020
 # --------------------------------------------------
 # HomeWork:
 # Build a dashboard for Memoryless Bar where they can change parameters for their ordering 
