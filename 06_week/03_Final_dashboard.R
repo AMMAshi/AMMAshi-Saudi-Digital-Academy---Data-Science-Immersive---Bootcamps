@@ -110,7 +110,7 @@ ui <- dashboardPage(
                       p("Changing parameters for the ordering and see the effect 
                         it has on inventory over the long run.")),
                   #sliderInput
-                  sliderInput("Keg_0", "Keg_0 to Keg_0", min = 0, max = 1, value = 0.2),
+                  sliderInput("Keg_0", "Keg_0 to Keg_0", min = 0, max = 1, value = 0.20),
                   sliderInput("Keg_1", "Keg_0 to Keg_1", min = 0, max = 1, value = 0.15),
                   sliderInput("Keg_2", "Keg_0 to Keg_2", min = 0, max = 1, value = 0.25),
                   sliderInput("Keg_3", "Keg_0 to Keg_3", min = 0, max = 1, value = 0.20)
@@ -126,21 +126,20 @@ ui <- dashboardPage(
 # --------------------------------------------------
 server <- function(input, output,session) {
   set.seed(122)
-
   T <- matrix(c(0.20, 0.15, 0.65, 0.00,
                 0.15, 0.20, 0.65, 0.00,
                 0.25, 0.05, 0.65, 0.05,
                 0.20, 0.15, 0.60, 0.05), nrow = 4, byrow = TRUE)
   
-  # creating column and row names
-  colnames(T) = c("Keg_0","Keg_1","Keg_2","Keg_3")
-  rownames(T) = c("Keg_0","Keg_1","Keg_2","Keg_3")
-  T
-  
   output$plot <- renderPlot(
     res = 40,
     {
-    plotmat(round(T%^%input$n,2), pos = c(2, 2), curve = 0.04, name = c("Keg_0","Keg_1","Keg_2","Keg_3"),
+    plotmat(round(matrix(c(input$Keg_0, (input$Keg_0-0.05), (input$Keg_0+0.45), 0.00,
+                           input$Keg_1, (input$Keg_1+0.05), (input$Keg_1+0.50), 0.00,
+                           input$Keg_2, (input$Keg_2-0.20), (input$Keg_2+0.40), (input$Keg_2-0.20),
+                           input$Keg_3, (input$Keg_3-0.05), (input$Keg_3+0.40), (input$Keg_3-0.15)), 
+                            nrow = 4, byrow = TRUE)%^%input$n,2), 
+            pos = c(2, 2), curve = 0.04, name = c("Keg_0","Keg_1","Keg_2","Keg_3"),
             lwd = 1, box.lwd = 1, cex.txt = 0.8, self.cex = 0.5, box.size = 0.09,
              self.shiftx = c(-0.1, 0.1, -0.1, 0.1),
             arr.type = "triangle",
