@@ -1,0 +1,146 @@
+---
+title: "A Report For LP Brewery"
+author: 'Author: Arwa Ashi'
+output:
+  pdf_document: default
+  word_document: default
+  toc: yes
+  html_document: null
+fig_caption: yes
+fontsize: 14pt
+number_sections: yes
+code_folding: show
+smooth_scroll: yes
+subtitle: Saudi Digital Academy 2020 - Homework 3 week 6 - Oct 14, 2020
+bibliography: bibtex.bib
+toc_depth: 3
+toc_float:
+  collapsed: yes
+---
+
+
+Question: Build a report for LP Brewery telling them all the information from their new problem with Dantzig and their previous problem before Dantzig.
+
+
+```{r, message = FALSE}
+library(knitr)
+
+df <- data.frame(Products      = c("Hopatronic", "American Kolsch style","Barrel-Aged Dantzig"),
+                 varibale      = c("x_1", "x_2", "x_3"),
+                 Price         = c("$ 13", "$ 23", "$ 30"),
+                 Hour_of_Labor = c("5  hours", "10 hours", "20 hours"),
+                 employees     = c(1, 1, 1),
+                 Hops          = c(4, 4, 4),
+                 Corn          = c(5, 15, 10),
+                 Malt          = c(35, 20, 15)
+                 )
+
+kable(df)
+```
+
+First  : Assuming $$month = 29 days = 696 hours$$
+Second : Objective Max $$z = 13 x_1 + 23  x_2 + 30  x_3 $$
+Third  : Subject to:      $$ 5h x_1 + 10h x_2 + 20h x_3 <= 696$$    (Hours = 1 month)
+                               $$x_1 +     x_2 +     x_3 <= 5$$     (Empolyees      )
+                            $$4  x_1 + 4   x_2 + 4   x_3 <= 150$$    (Hops           )
+                            $$5  x_1 + 15  x_2 + 10  x_3 <= 4800$$   (Corn           )
+                            $$35 x_1 + 20  x_2 + 15  x_3 <= 1190$$   (Malt           )
+                               $$x_1, x_2, x_3 >= 0$$
+                              
+Fourth : build a matrix fucntion for the the previous and the new problem with Dantzig:
+
+```{r kable}
+library(lpSolve)
+
+#------------------------------------------------------------
+# The previous problem before Dantzig
+#------------------------------------------------------------
+old_f.obj <- c(13,23)
+
+old_f.col <- matrix(c(4,4,      # Hops
+                      5,15,     # Corn
+                      35,20),   # Malt
+                    nrow =3, 
+                    byrow = T
+                    )
+
+old_f.dir <- c("<=",
+               "<=",
+               "<=")
+
+old_f.rhs<-c(160,
+             4800,
+             1190)
+
+old_sol<-lp("max",old_f.obj,old_f.col,old_f.dir,old_f.rhs,compute.sens = T)
+old_sol$objval
+old_sol$solution
+
+# undrestading the dual help you undrestand the shadow prices
+old_sol$duals
+
+#------------------------------------------------------------
+# The new  problem with Dantzig without hours and employees
+#------------------------------------------------------------
+f.obj <- c(13,23,30)
+
+f.col <- matrix(c(4, 4, 4,      # Hops
+                  5,15,10,      # Corn
+                  35,20,15),     # Malt  
+                nrow  = 3, 
+                byrow = T)
+
+f.dir <- c("<=",
+           "<=",
+           "<=")
+
+f.rhs<-c(160,
+         4800,
+         1190)
+
+# Fifth: solve the LP system
+sol<-lp("max",f.obj,f.col,f.dir,f.rhs,compute.sens = T)
+sol$objval
+sol$solution
+
+# undrestading the dual help you undrestand the shadow prices
+sol$duals
+
+#------------------------------------------------------------
+# The new  problem with Dantzig
+#------------------------------------------------------------
+f.obj <- c(13,23,30)
+
+f.col <- matrix(c(5,10,20,      # Hours
+                  1, 1, 1,      # Employee
+                  4, 4, 4,      # Hops
+                  5,15,10,      # Corn
+                  35,20,15),    # Malt  
+                nrow  = 5, 
+                byrow = T)
+
+f.dir <- c("<=",
+           "<=",
+           "<=",
+           "<=",
+           "<=")
+
+f.rhs<-c(696,
+         5  ,
+         160,
+         4800,
+         1190)
+
+# Fifth: solve the LP system
+sol<-lp("max",f.obj,f.col,f.dir,f.rhs,compute.sens = T)
+sol$objval
+sol$solution
+
+# undrestading the dual help you undrestand the shadow prices
+sol$duals
+
+```
+
+
+
+
