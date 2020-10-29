@@ -49,9 +49,12 @@ male   1         109
 # --------------------------------------------------------------------------------------
 # Answer
 # print(titanic_df['Survived'].count())                                                 # total passenger = 891
+# print(titanic_df.loc[titanic_df.Survived == 1].count())                               # total survival  = 342
 # print(titanic_df.loc[titanic_df.Fare < 10].groupby(['Survived']).Survived.agg([len])) # total survival  = 67
 # print(67/891)                                                                         # 0.07519640852974187
-# The percentage of people that survied who paid a fare less than 10, is 7.51%
+# The percentage of people that survived who paid a fare less than 10, is 7.51% out of total passengers.
+# print(67/342)                                                                         #0.195906432748538 
+# The percentage of people that survived who paid a fare less than 10, is 19.59% out of total survived passengers.
 
 
 # Q6 - What is the average age of those who didn't survive?
