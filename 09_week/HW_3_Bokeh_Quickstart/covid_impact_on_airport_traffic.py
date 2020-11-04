@@ -36,7 +36,7 @@ p1 = figure(
     plot_width   = 800,
     plot_height  = 600,
     title        = 'Covid19 Impact on Airport  Traffic - Country with Top Percent of Baseline',
-    x_axis_label = 'Country with Top Percent of Baseline',
+    x_axis_label = 'Date',
     y_axis_label = 'Percent of Baseline',
     tools        = "pan,box_select,zoom_in,zoom_out,save,reset"
 )
