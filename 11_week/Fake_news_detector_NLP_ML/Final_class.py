@@ -1,3 +1,11 @@
+# --------------------------------------------------------------------------------------------
+# Abduallah - Arwa Ashi  - Hutaf 
+# Weekend Project -  Week 11 - Nov 20, 2020
+# Saudi Digital Academy
+# --------------------------------------------------------------------------------------------
+# NLP Based Text Fake News Detector
+# --------------------------------------------------------------------------------------------
+
 # Make necessary imports
 # 1- (Raw Text) <<<<<  Reading and Exploring your Data
 import pandas as pd
