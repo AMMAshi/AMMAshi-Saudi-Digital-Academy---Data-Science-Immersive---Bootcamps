@@ -127,7 +127,7 @@ y_pred = gridsearch.predict(tfidf_test)
 # scores  = cross_val_score(gridsearch, X, y, cv=5)
 # print(f'PAC K Fold Accuracy: {round(scores.mean()*100,2)}%')
 
-# 5- Test Data
+# Test Data
 # --------------------------------------------------------------------------------------------------
 # 1- Read the data
 test_data = pd.read_csv('test.csv')
