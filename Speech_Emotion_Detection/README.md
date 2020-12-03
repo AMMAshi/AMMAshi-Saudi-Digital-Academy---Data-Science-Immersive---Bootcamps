@@ -56,7 +56,7 @@ For C: it gives 12 feature for each audio.
 
 
 # 4- Splitting the data frame
-Dividing the dataset into 3 dataset Training, Validation and Testing. 
+Dividing the dataset into 3 data frame Training, Validation and Testing. The Validation data frame provided an unbiased evaluation of a model fit on the training data frame. 
 
 # 5- Creating the models
 ![Test Image 5](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/result.png)
