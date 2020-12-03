@@ -100,13 +100,13 @@ data, sample_rate        = librosa.load(sname)
 y_harmonic, y_percussive = librosa.effects.hpss(data)
 pitches, magnitudes      = librosa.core.pitch.piptrack(y=data, sr=sample_rate)
 
-# Fear Sad feature
+# Sad wave feature
 mfcc       = librosa.feature.mfcc(y=data, sr=sample_rate, n_mfcc=13)    
 pitches    = pitches
 magnitudes = magnitudes
 C          = librosa.feature.chroma_cqt(y=y_harmonic, sr=44100)  
 
-# Fear Sad Visualization
+# Sad wave Visualization
 librosa.display.waveplot(data, sr=sample_rate)
 plt.title("Sad Wave")
 plt.show()
