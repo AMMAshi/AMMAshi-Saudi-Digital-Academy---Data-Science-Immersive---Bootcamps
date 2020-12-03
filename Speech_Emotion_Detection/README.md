@@ -69,7 +69,7 @@ The following are the steps that I used to create and evaluate the Machine Learn
   
 3- Using the result of GridSearchCV for the prediction then generating classification report.
 
-4- Evaluation the model’s performance by using confusion matrix and heatmap.
+4- Evaluating the model’s performance by using confusion matrix and heatmap.
 
 5- Result
  
