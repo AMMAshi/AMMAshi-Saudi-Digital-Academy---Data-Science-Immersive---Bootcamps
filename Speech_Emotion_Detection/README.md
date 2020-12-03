@@ -83,11 +83,11 @@ The following are the steps that I used to create and evaluate the Deep Learning
 
 1- Using .ravel() to convert the y (target or emotion column) data frame from two dimension to one dimension.
 
-2- Applying One-Hot Encoding >> LabelEncoder() << into the y (target or emotion column) data frame to get array that contain zeros and  has a mean equals to 1 to which emotion that row contains.
+2- Applying One-Hot Encoding >> LabelEncoder() << into the y (target or emotion column) data frame to get array that contains zeros and  has a mean equals to 1 to which emotion that row has.
 
 3- Changing features dimension into one for Conv1D, (convolve) along one dimensions, in a convolutional neural network CNN model. 
 
-4- Creating CNN model that contain three layers. Where loss = 'categorical_crossentropy', optimizer = tensorflow.optimizers.RMSprop(lr=0.00001, decay=1e-6), and metrics = ['accuracy'].
+4- Creating CNN model where loss = 'categorical_crossentropy', optimizer = tensorflow.optimizers.RMSprop(lr=0.00001, decay=1e-6), and metrics = ['accuracy'].
 
 5- Using the model result for the prediction then generating classification report.
 
