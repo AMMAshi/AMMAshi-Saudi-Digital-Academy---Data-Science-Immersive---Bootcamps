@@ -61,28 +61,22 @@ Dividing the dataset into 3 data frame Training, Validation and Testing. The Val
 # 5- Creating the models
 ![Test Image 5](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/result.png)
 # Machine Learning: 
-1- Using pipeline.
+The following are the step that I used to create the model:
 
-2- GridSearchCV with search_space = [{'clf':[PassiveAggressiveClassifier()]},
-                {'clf':[LogisticRegression()]         },
-                {'clf':[MultinomialNB()]              },
-                {'clf':[BernoulliNB()]                },
-                {'clf':[RidgeClassifier()]            },
-                {'clf':[RandomForestClassifier()]     },
-                {'clf':[SGDClassifier()]              },
-                {'clf':[GradientBoostingClassifier()] },
-                {'clf':[MLPClassifier()]              },
-                {'clf':[Perceptron()]                 }
-                ]
-                
-3- Evaluation 
+1- Creating a pipeline.
 
-4- Result 
+2- Passing 10 classifiers into the pipeline by using GridSearchCV with search_space that contains: Passive Aggressive Classifier, Logistic Regression, Multinomial NB, Bernoulli NB, Ridge Classifier, Random Forest Classifier, SGD Classifier, Gradient Boosting Classifier, MLP Classifier, Perceptron; to find the best classifier with the highest accuracy score to fit the training data frame.
+  
+3- Using the result of GridSearchCV for the prediction then generating classification report.
 
-a) The best model randomly selected are GradientBoostingClassifier, RidgeClassifier, and 
-RandomForestClassifier.
+4- Evaluation the model’s performance by using confusion matrix and heatmap.
 
-b) The Accuracy Score range by using Training, Validation, and Testing Data is 44% up to 68.05%.
+5- Result
+ 
+a) The best classifiers that were selected based on its highest accuracy score are Gradient Boosting Classifier, Ridge Classifier, and Random Forest Classifier.
+
+b) The model accuracy score range by using Training, Validation, and Testing Data frame is 44% up to 68.05%.
+
 
 # Deep Learning 
 1- using .ravel() converting 2D to 1D.
