@@ -1,14 +1,15 @@
 
-# Author: Arwa Ashi
-# Saudi Digital Academy 
-# Speech Emotion Detection - Final Project - Dec 3rd, 2020
+Author: Arwa Ashi
+Saudi Digital Academy 
+Speech Emotion Detection - Final Project - Dec 3rd, 2020
 # -------------------------------------------------------------------
 
 # Objective
 As a Data Scientist, I have been tasked with designing a model that detects speech emotions such as anger, disgust, fear, happiness, neutral, sadness and surprise. 
 
 # Project outline: 
-
+![GitHub Logo](/images/Project_outline.png)
+Format: ![Alt Text](url)
 
 # Code
 The code is divided into 5 .py files:
