@@ -71,7 +71,7 @@ The following are the steps that I used to create and evaluate the Machine Learn
 
 4- Evaluating the model’s performance by using confusion matrix and heatmap.
 
-5- Result
+5- Result:
  
 a) The best classifiers that were selected based on its highest accuracy score are Gradient Boosting Classifier, Ridge Classifier, and Random Forest Classifier.
 
@@ -97,8 +97,9 @@ The following are the steps that I used to create and evaluate the Deep Learning
 
 # 6- Testing the models’ performance
 ![Test Image 6](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/test.png)
-using a new angry wave to test the models’ performance:
+Using a new angry wave from CREMA dataset to test the models’ performance:
 
 1- For The Machine Learning Model: the model predicted that the wave was an angry wave.
 
-2- For The Deep Learning Model: the model predicted that the wave was 99% as an angry wave. 
+2- For The Deep Learning Model: the model predicted that the wave was 98% as an angry wave.
+ 
