@@ -10,8 +10,7 @@ Speech Emotion Detection - Final Project - Dec 3rd, 2020
 As a Data Scientist, I have been tasked with designing a model that detects speech emotions such as anger, disgust, fear, happiness, neutral, sadness and surprise. 
 
 # Project outline: 
-![GitHub Logo](/images/Project_outline.png)
-Format: ![Alt Text](url)
+![Test Image 1](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/Project_outline.png)
 
 # Code
 The code is divided into 5 .py files:
