@@ -24,3 +24,8 @@ p3_SAVEE_Baseline_model_01_DeepLearning.py
 p4_SAVEE_Baseline_model_02_MachineLearning.py
 
 p5_SAVEE_Baseline_models_test.py
+# -------------------------------------------------------------------
+
+# 1- Finding dataset
+Using SAVEE Database, speech emotion annotated data for emotion recognition systems, from
+https://www.kaggle.com/barelydedicated/savee-database.
