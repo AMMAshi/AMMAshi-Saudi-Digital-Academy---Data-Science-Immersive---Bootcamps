@@ -33,7 +33,8 @@ https://www.kaggle.com/barelydedicated/savee-database.
 
 # 2-  Extraction 65 features for each audio
 ![Test Image 3](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/features.png)
-1- parse the filename to get the emotions
+1- parse the filename to get the emotions.
+
 2- Extraction 65 features for each audio by using mfccs, pitches, magnitudes, and C. where:
 
 For mfccs: 13 feature 
@@ -43,3 +44,10 @@ For pitches:  taking only the 20 first value of the audio
 For magnitudes:  taking only the 20 first value of the audio
 
 For C: 12 feature 
+
+# 3- EDA Exploratory data analysis
+![Test Image 4](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/EDA.png)
+1- Comparing emotion waves. 
+
+2- Exploring total waves for each emotion.
+
