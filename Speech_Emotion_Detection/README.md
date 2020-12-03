@@ -51,3 +51,52 @@ For C: 12 feature
 
 2- Exploring total waves for each emotion.
 
+# 4- training, validating and testing the data
+Dividing the dataset into 3 dataset Training, Validation and Testing. 
+
+# 5- creating the models
+![Test Image 5](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/result.png)
+# Machine Learning: 
+1- Using pipeline.
+
+2- GridSearchCV with search_space = [{'clf':[PassiveAggressiveClassifier()]},
+                {'clf':[LogisticRegression()]         },
+                {'clf':[MultinomialNB()]              },
+                {'clf':[BernoulliNB()]                },
+                {'clf':[RidgeClassifier()]            },
+                {'clf':[RandomForestClassifier()]     },
+                {'clf':[SGDClassifier()]              },
+                {'clf':[GradientBoostingClassifier()] },
+                {'clf':[MLPClassifier()]              },
+                {'clf':[Perceptron()]                 }
+                ]
+3- Evaluation 
+
+4- Result 
+
+a) The best model randomly selected are GradientBoostingClassifier, RidgeClassifier, and 
+RandomForestClassifier.
+
+b) The Accuracy Score range by using Training, Validation, and Testing Data is 44% up to 68.05%.
+
+# Deep Learning 
+1- using .ravel() converting 2D to 1D.
+
+2- One-Hot Encoding >>  LabelEncoder() <<
+
+3- Changing Dimension for CNN Model
+
+4- CNN Model
+
+5- Evaluation 
+
+6- Result: The Accuracy Score range by using Training, Validation, and Testing Data is 52.78% up to 86.97%. 
+
+# 6- validate the model
+By using classification_report(y_test, y_pred) and visualization 
+
+# 7- using a new angry wave to test the models’ performance
+![Test Image 6](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/test.png)
+1- For The Machine Learning Model: the model predicted that the wave was an angry wave.
+
+2- For The Deep Learning Model: the model predicted that the wave was 99% as an angry wave. 
