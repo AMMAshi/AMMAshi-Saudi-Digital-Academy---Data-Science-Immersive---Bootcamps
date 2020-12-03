@@ -35,17 +35,17 @@ https://www.kaggle.com/barelydedicated/savee-database.
 ![Test Image 3](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/features.png)
 1- Parsing the filename to get the emotions.
 
-2- Creating a data frame that contains has 3 columns (emotion, source, and path). 
+2- Creating a data frame with 3 columns (Emotion, Source, Path). 
 
-3- Extracting 65 features for each audio by using mfccs, pitches, magnitudes, and C. where:
+3- Extracting 65 features for each audio by using mfccs, pitches, magnitudes, and C. and add them as columns to the data frame where:
 
-For mfccs: it gives 13 feature for each audio. 
+- mfccs: it gives 13 feature for each audio. 
 
-For pitches, taking only the 20 first value of the audio.
+- pitches, taking only the 20 first value of the audio.
 
-For magnitudes: taking only the 20 first value of the audio.
+- magnitudes: taking only the 20 first value of the audio.
 
-For C: it gives 12 feature for each audio.
+- C: it gives 12 feature for each audio.
 
 
 # 3- EDA Exploratory data analysis
