@@ -61,7 +61,7 @@ Dividing the dataset into 3 data frame Training, Validation and Testing. The Val
 # 5- Creating the models
 ![Test Image 5](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/result.png)
 # Machine Learning: 
-The following are the step that I used to create the model:
+The following are the steps that I used to create and evaluate the Machine Learning model:
 
 1- Creating a pipeline.
 
@@ -79,6 +79,8 @@ b) The model accuracy score range by using Training, Validation, and Testing Dat
 
 
 # Deep Learning 
+The following are the steps that I used to create and evaluate the Deep Learning model:
+
 1- using .ravel() converting 2D to 1D.
 
 2- One-Hot Encoding >>  LabelEncoder() <<
