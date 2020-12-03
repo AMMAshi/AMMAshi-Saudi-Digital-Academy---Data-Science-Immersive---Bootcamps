@@ -176,7 +176,7 @@ for index,path in enumerate(df.path):
     
     # The feature
     # ------------------------------------------------------
-    # mfccs has 30 feature 
+    # mfccs has 13 feature 
     mfccs      = np.mean(librosa.feature.mfcc(y=X, sr=sample_rate, n_mfcc=13), axis=1) # <<< axis = 1 Original axis = 0
     # taking only the 20 first value of the audio
     pitches    = np.trim_zeros(np.mean(pitches,axis=1))[:20]
