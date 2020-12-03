@@ -50,9 +50,10 @@ For C: it gives 12 feature for each audio.
 
 # 3- EDA Exploratory data analysis
 ![Test Image 4](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/EDA.png)
-1- Comparing emotion waves. 
+1- Comparing emotion waves: the graph shows a comparison between angry, fear, and sad waves. Each emotion has its unique wave. 
 
-2- Exploring total waves for each emotion.
+2- Exploring total waves for each emotion: the neutral emotion has 120 waves in dataset and 60 waves for each other emotions.
+
 
 # 4- Splitting the data frame
 Dividing the dataset into 3 dataset Training, Validation and Testing. 
