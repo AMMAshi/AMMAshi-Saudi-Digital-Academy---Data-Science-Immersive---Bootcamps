@@ -13,7 +13,7 @@ As a Data Scientist, I have been tasked with designing a model that detects spee
 ![Test Image 1](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/Project_outline.png)
 
 # Code
-The code is divided into 5 .py files:
+The code is divided into 5 .py files to organize my work.
 
 p1_SAVEE_DataFrame.py 
 
@@ -33,9 +33,11 @@ https://www.kaggle.com/barelydedicated/savee-database.
 
 # 2-  Extraction 65 features for each audio
 ![Test Image 3](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/features.png)
-1- parse the filename to get the emotions.
+1- Parsing the filename to get the emotions.
 
-2- Extraction 65 features for each audio by using mfccs, pitches, magnitudes, and C. where:
+2- Creating a data frame that contains has 3 columns (emotion, source, and path). 
+
+3- Extracting 65 features for each audio by using mfccs, pitches, magnitudes, and C. where:
 
 For mfccs: 13 feature 
 
