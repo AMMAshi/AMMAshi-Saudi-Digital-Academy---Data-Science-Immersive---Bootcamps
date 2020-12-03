@@ -31,7 +31,7 @@ p5_SAVEE_Baseline_models_test.py
 Using SAVEE Database, speech emotion annotated data for emotion recognition systems, from
 https://www.kaggle.com/barelydedicated/savee-database.
 
-# 2-  Extraction 65 features for each audio
+# 2-  Extracting 65 features for each audio
 ![Test Image 3](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/features.png)
 1- Parsing the filename to get the emotions.
 
@@ -39,13 +39,14 @@ https://www.kaggle.com/barelydedicated/savee-database.
 
 3- Extracting 65 features for each audio by using mfccs, pitches, magnitudes, and C. where:
 
-For mfccs: 13 feature 
+For mfccs: it gives 13 feature for each audio. 
 
-For pitches:  taking only the 20 first value of the audio
+For pitches, taking only the 20 first value of the audio.
 
-For magnitudes:  taking only the 20 first value of the audio
+For magnitudes: taking only the 20 first value of the audio.
 
-For C: 12 feature 
+For C: it gives 12 feature for each audio.
+
 
 # 3- EDA Exploratory data analysis
 ![Test Image 4](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/EDA.png)
