@@ -75,7 +75,7 @@ The following are the steps that I used to create and evaluate the Machine Learn
  
 a) The best classifiers that were selected based on its highest accuracy score are Gradient Boosting Classifier, Ridge Classifier, and Random Forest Classifier.
 
-b) The model accuracy score range by using Training, Validation, and Testing Data frame is 44% up to 68.05%.
+b) The model accuracy score range by using Training, Validation, and Testing Data frame is from 44% up to 68.05%.
 
 
 # Deep Learning 
@@ -89,14 +89,13 @@ The following are the steps that I used to create and evaluate the Deep Learning
 
 4- Creating CNN model that contain three layers. Where loss = 'categorical_crossentropy', optimizer = tensorflow.optimizers.RMSprop(lr=0.00001, decay=1e-6), and metrics = ['accuracy'].
 
-5- Evaluation 
+5- Using the model result for the prediction then generating classification report.
 
-6- Result: The Accuracy Score range by using Training, Validation, and Testing Data is 52.78% up to 86.97%. 
+6- Evaluating by plotting model history epochs and loss.
 
-# 6- Validating the model
-By using classification report and visualization 
+7- Result: the accuracy score range by using Training, Validation, and Testing Data frame is from 52.78% up to 86.97%. 
 
-# 7- Testing the models’ performance
+# 6- Testing the models’ performance
 ![Test Image 6](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/test.png)
 using a new angry wave to test the models’ performance:
 
