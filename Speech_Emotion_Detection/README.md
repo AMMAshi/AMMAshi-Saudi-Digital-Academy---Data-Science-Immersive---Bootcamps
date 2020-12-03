@@ -1,9 +1,9 @@
 
-#Author: Arwa Ashi
+# Author: Arwa Ashi
 
-#Saudi Digital Academy 
+# Saudi Digital Academy 
 
-#Speech Emotion Detection - Final Project - Dec 3rd, 2020
+# Speech Emotion Detection - Final Project - Dec 3rd, 2020
 # -------------------------------------------------------------------
 
 # Objective
