@@ -58,7 +58,7 @@ For C: it gives 12 feature for each audio.
 # 4- Splitting the data frame
 Dividing the dataset into 3 data frame Training, Validation and Testing. The Validation data frame provided an unbiased evaluation of a model fit on the training data frame. 
 
-# 5- Creating the models
+# 5- Creating and evaluating the models
 ![Test Image 5](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/result.png)
 # Machine Learning: 
 The following are the steps that I used to create and evaluate the Machine Learning model:
@@ -81,13 +81,13 @@ b) The model accuracy score range by using Training, Validation, and Testing Dat
 # Deep Learning 
 The following are the steps that I used to create and evaluate the Deep Learning model:
 
-1- using .ravel() converting 2D to 1D.
+1- Using .ravel() to convert the y (target or emotion column) data frame from two dimension to one dimension.
 
-2- One-Hot Encoding >>  LabelEncoder() <<
+2- Applying One-Hot Encoding >> LabelEncoder() << into the y (target or emotion column) data frame to get array that contain zeros and  has a mean equals to 1 to which emotion that row contains.
 
-3- Changing Dimension for CNN Model
+3- Changing features dimension into one for Conv1D, (convolve) along one dimensions, in a convolutional neural network CNN model. 
 
-4- CNN Model
+4- Creating CNN model that contain three layers. Where loss = 'categorical_crossentropy', optimizer = tensorflow.optimizers.RMSprop(lr=0.00001, decay=1e-6), and metrics = ['accuracy'].
 
 5- Evaluation 
 
