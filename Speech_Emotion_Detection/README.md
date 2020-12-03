@@ -51,10 +51,10 @@ For C: 12 feature
 
 2- Exploring total waves for each emotion.
 
-# 4- training, validating and testing the data
+# 4- Splitting the data frame
 Dividing the dataset into 3 dataset Training, Validation and Testing. 
 
-# 5- creating the models
+# 5- Creating the models
 ![Test Image 5](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/result.png)
 # Machine Learning: 
 1- Using pipeline.
@@ -70,6 +70,7 @@ Dividing the dataset into 3 dataset Training, Validation and Testing.
                 {'clf':[MLPClassifier()]              },
                 {'clf':[Perceptron()]                 }
                 ]
+                
 3- Evaluation 
 
 4- Result 
@@ -92,11 +93,13 @@ b) The Accuracy Score range by using Training, Validation, and Testing Data is 4
 
 6- Result: The Accuracy Score range by using Training, Validation, and Testing Data is 52.78% up to 86.97%. 
 
-# 6- validate the model
-By using classification_report(y_test, y_pred) and visualization 
+# 6- Validating the model
+By using classification report and visualization 
 
-# 7- using a new angry wave to test the models’ performance
+# 7- Testing the models’ performance
 ![Test Image 6](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/test.png)
+using a new angry wave to test the models’ performance:
+
 1- For The Machine Learning Model: the model predicted that the wave was an angry wave.
 
 2- For The Deep Learning Model: the model predicted that the wave was 99% as an angry wave. 
