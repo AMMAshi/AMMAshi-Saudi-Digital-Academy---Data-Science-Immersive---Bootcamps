@@ -7,7 +7,7 @@
 # -------------------------------------------------------------------
 
 # Objective
-As a Data Scientist, I have been tasked with designing a model that detects speech emotions such as anger, disgust, fear, happiness, neutral, sadness and surprise. The project can add more support in a decision making that is related to psychiatrists understanding their patients' emotions and analyzing the case, or a customer service call center to improve customer experience and journey.
+As a Data Scientist, I have been tasked with designing a model that detects speech emotions such as anger, disgust, fear, happiness, neutral, sadness and surprise. The project can add more support in a decision making that is related to psychiatrists understanding their patients' emotions and improving analyzing the diverse cases, or a customer service call center to improve customer experience and journey.
 
 # Project outline: 
 ![Test Image 1](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/Project_outline.png)
