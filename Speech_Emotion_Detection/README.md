@@ -19,15 +19,19 @@ The code is divided into 5 .py files to organize my work.
 This code where the project DataFrame was created and prepared.
 
 - p2_SAVEE_Exploratory_data_analysis.py 
+
 This code where the DataFrame exploration was done.  
 
 - p3_SAVEE_Baseline_model_01_DeepLearning.py
+
 This code where the deep learning model was created.
 
 - p4_SAVEE_Baseline_model_02_MachineLearning.py
+
 This code where the machine learning model was created.
 
 - p5_SAVEE_Baseline_models_test.py
+
 The code where the models' performance evaluation was done.
 
 # -------------------------------------------------------------------
