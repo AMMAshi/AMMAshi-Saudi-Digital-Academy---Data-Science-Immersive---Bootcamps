@@ -44,13 +44,14 @@ https://www.kaggle.com/barelydedicated/savee-database.
 
 # 2-  Extracting 65 features for each audio
 ![Test Image 3](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/features.png)
-1- Using [Librosa](https://librosa.org/doc/latest/index.html) which is a python package for music and audio analysis. It provides the building blocks necessary to create audio information retrieval systems.
+
+1- Reading audio waves by using [Librosa](https://librosa.org/doc/latest/index.html) which is a python package for music and audio analysis. It provides the building blocks necessary to create audio information retrieval systems.
 
 2- Parsing the filename to get the emotions.
 
 3- Creating a data frame with 3 columns (Emotion, Source, Path). 
 
-4- Extracting 65 features for each audio by using mfccs, pitches, magnitudes, and C. and adding them as columns to the data frame where:
+4- Extracting 65 features for each audio by using [mfccs](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum), [pitches](https://en.wikipedia.org/wiki/Pitch_(music)), magnitudes, and C. and adding them as columns to the data frame where:
 
 - mfccs: it gives 13 feature for each audio. 
 
