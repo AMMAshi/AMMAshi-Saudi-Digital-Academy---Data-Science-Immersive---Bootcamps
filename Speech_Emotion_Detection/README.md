@@ -51,7 +51,7 @@ https://www.kaggle.com/barelydedicated/savee-database.
 
 3- Creating a data frame with 3 columns (Emotion, Source, Path). 
 
-4- Extracting 65 features for each audio by using [mfccs](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum), [pitches](https://en.wikipedia.org/wiki/Pitch_(music)), magnitudes, and C. and adding them as columns to the data frame where:
+4- Extracting 65 features for each audio by using [mfccs](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum), [pitches](https://en.wikipedia.org/wiki/Pitch_(music)), magnitudes, and [C](https://en.wikipedia.org/wiki/Chroma_feature). and adding them as columns to the data frame where:
 
 - mfccs: it gives 13 feature for each audio. 
 
