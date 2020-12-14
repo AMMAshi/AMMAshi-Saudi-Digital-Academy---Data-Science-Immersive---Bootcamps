@@ -43,7 +43,7 @@ Using SAVEE Database, speech emotion annotated data for emotion recognition syst
 https://www.kaggle.com/barelydedicated/savee-database.
 
 # 2-  Extracting 65 features for each audio
-![Test Image 3](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/features.png)
+![Test Image 3](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/new_features.png)
 
 1- Reading audio waves by using [Librosa](https://librosa.org/doc/latest/index.html) which is a python package for music and audio analysis. It provides the building blocks necessary to create audio information retrieval systems.
 
