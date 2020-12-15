@@ -63,6 +63,9 @@ https://www.kaggle.com/barelydedicated/savee-database.
 
 
 # 3- EDA Exploratory data analysis
+
+[Exploratory data analysis](https://en.wikipedia.org/wiki/Exploratory_data_analysis) step is to identify missing data, explore data type, visualize the data before applying any analysis to it, look at data distribution, mean and standard deviation, and etc.
+
 ![Test Image 4a](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/EDA_02.png)
 1- Comparing emotion waves: the graph shows a comparison between anger, disgust, fear, happiness, neutral, sadness and surprise waves. Each emotion has its length of time and unique wave. 
 
