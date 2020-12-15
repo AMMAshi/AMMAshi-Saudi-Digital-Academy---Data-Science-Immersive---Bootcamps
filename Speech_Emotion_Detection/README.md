@@ -83,7 +83,7 @@ The following are the steps that I used to create and evaluate the Machine Learn
 
 1- Creating a pipeline.
 
-2- Passing 10 classifiers into the pipeline by using GridSearchCV with search_space that contains: Passive Aggressive Classifier, Logistic Regression, Multinomial NB, Bernoulli NB, Ridge Classifier, Random Forest Classifier, SGD Classifier, Gradient Boosting Classifier, MLP Classifier, Perceptron; to find the best classifier with the highest accuracy score to fit the training data frame.
+2- Passing 10 classifiers into the pipeline by using [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html) with search_space that contains: Passive Aggressive Classifier, Logistic Regression, Multinomial NB, Bernoulli NB, Ridge Classifier, Random Forest Classifier, SGD Classifier, Gradient Boosting Classifier, MLP Classifier, Perceptron; to find the best classifier with the highest accuracy score to fit the training data frame.
   
 3- Using the result of GridSearchCV for the prediction then generating classification report.
 
