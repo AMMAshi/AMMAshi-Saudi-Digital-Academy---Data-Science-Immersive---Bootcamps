@@ -121,3 +121,4 @@ Using a new angry wave from CREMA dataset to test the models’ performance:
 
 2- For The Deep Learning Model: the model predicted that the wave was 98% as an angry wave.
  
+# 7- Future work
