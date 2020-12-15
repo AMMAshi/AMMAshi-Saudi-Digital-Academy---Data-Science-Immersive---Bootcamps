@@ -66,7 +66,7 @@ https://www.kaggle.com/barelydedicated/savee-database.
 ![Test Image 4a](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/EDA_02.png)
 1- Comparing emotion waves: the graph shows a comparison between anger, disgust, fear, happiness, neutral, sadness and surprise waves. Each emotion has its length of time and unique wave. 
 
-![Test Image 4b](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/EDA.png)
+![Test Image 4b](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/EDA_03.png)
 2- Exploring total waves for each emotion: the neutral emotion has 120 waves in dataset and 60 waves for each other emotions.
 
 
