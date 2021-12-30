@@ -37,7 +37,7 @@ The code where the models' performance evaluation was done by introducing unknow
 
 # -------------------------------------------------------------------
 
-# 1- Finding dataset
+# 1- The dataset
 ![Test Image 2](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/DataFrame.png)
 Using SAVEE Database, speech emotion annotated data for emotion recognition systems, from
 https://www.kaggle.com/barelydedicated/savee-database.
