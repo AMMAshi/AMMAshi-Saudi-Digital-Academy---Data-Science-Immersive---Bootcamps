@@ -126,3 +126,8 @@ Using a new angry wave from [CREMA dataset](https://www.kaggle.com/ejlok1/cremad
 2- For The Deep Learning Model: the model predicted that the wave was 98% as an angry wave.
  
 # 5- Future work
+
+1- Using Arabic language audios.
+
+2- Impelemting new techniques for the models.
+
