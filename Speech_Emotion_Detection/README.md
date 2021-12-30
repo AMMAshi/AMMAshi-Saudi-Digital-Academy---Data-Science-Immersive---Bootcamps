@@ -76,7 +76,12 @@ https://www.kaggle.com/barelydedicated/savee-database.
 # 3.a Splitting the data frame
 Dividing the dataset into 3 data frame Training, Validation and Testing. The Validation data frame provided an unbiased evaluation of a model fit on the training data frame. 
 
-# 3.b Creating and evaluating the models
+# 3.b Selecting Features
+Using [SelectKBest](https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html) to select the top features with the highest F score.
+
+# 3.c Deal with Imbalanced Data using [SMOTE](https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/)
+
+# 3.d Creating and evaluating the models
 ![Test Image 5](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/result.png)
 # Machine Learning: 
 The following are the steps that I used to create and evaluate the Machine Learning model:
