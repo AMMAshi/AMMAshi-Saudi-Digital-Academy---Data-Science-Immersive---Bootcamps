@@ -2,7 +2,7 @@
 # ====================================================================
 # Author: Arwa Ashi
 # Saudi Digital Academy 
-# Speech Emotion Detection - Final Project - Dec 3rd, 2020
+# Speech Emotion Detection - Final Project - Dec 4th, 2020
 # ====================================================================
 # ====================================================================
 
@@ -48,6 +48,98 @@ plt.show()
 SAVEE_DC = "SAVEE_AudioData/DC/"
 
 
+# Angry Wave
+# --------------------------------------------------------------------
+# Calling Angry Wave
+aname = SAVEE_DC + 'a11.wav'
+data, sample_rate        = librosa.load(aname)
+y_harmonic, y_percussive = librosa.effects.hpss(data)
+pitches, magnitudes      = librosa.core.pitch.piptrack(y=data, sr=sample_rate)
+
+# Angry Wave feature
+mfcc       = librosa.feature.mfcc(y=data, sr=sample_rate, n_mfcc=13)    
+pitches    = pitches
+magnitudes = magnitudes
+C          = librosa.feature.chroma_cqt(y=y_harmonic, sr=44100)  
+
+# Angry Wave Visualization
+librosa.display.waveplot(data, sr=sample_rate)
+plt.title("Angry Wave")
+plt.ylim([-1.5, 1.5])
+plt.xlim([0, 6])
+plt.show()
+
+librosa.display.specshow(mfcc, x_axis='time')
+plt.ylabel('MFCC')
+plt.colorbar()
+plt.title("Angry Wave")
+plt.show()
+
+librosa.display.specshow(pitches, x_axis='time')
+plt.ylabel('Pitches')
+plt.colorbar()
+plt.title("Angry Wave")
+plt.show()
+
+librosa.display.specshow(magnitudes, x_axis='time')
+plt.ylabel('Magnitudes')
+plt.colorbar()
+plt.title("Angry Wave")
+plt.show()
+
+librosa.display.specshow(C, x_axis='time')
+plt.ylabel('C')
+plt.colorbar()
+plt.title("Angry Wave")
+plt.show()
+
+# Disgust Wave
+# --------------------------------------------------------------------
+# Calling Disgust Wave
+dname = SAVEE_DC + 'd11.wav'
+data, sample_rate        = librosa.load(dname)
+y_harmonic, y_percussive = librosa.effects.hpss(data)
+pitches, magnitudes      = librosa.core.pitch.piptrack(y=data, sr=sample_rate)
+
+# Disgust Wave feature
+mfcc       = librosa.feature.mfcc(y=data, sr=sample_rate, n_mfcc=13)    
+pitches    = pitches
+magnitudes = magnitudes
+C          = librosa.feature.chroma_cqt(y=y_harmonic, sr=44100)  
+
+# Disgust Wave Visualization
+librosa.display.waveplot(data, sr=sample_rate)
+plt.title("Disgust Wave")
+plt.ylim([-1.5, 1.5])
+plt.xlim([0, 6])
+plt.show()
+
+librosa.display.specshow(mfcc, x_axis='time')
+plt.ylabel('MFCC')
+plt.colorbar()
+plt.title("Disgust Wave")
+plt.show()
+
+librosa.display.specshow(pitches, x_axis='time')
+plt.ylabel('Pitches')
+plt.colorbar()
+plt.title("Disgust Wave")
+plt.show()
+
+librosa.display.specshow(magnitudes, x_axis='time')
+plt.ylabel('Magnitudes')
+plt.colorbar()
+plt.title("Disgust Wave")
+plt.show()
+
+librosa.display.specshow(C, x_axis='time')
+plt.ylabel('C')
+plt.colorbar()
+plt.title("Disgust Wave")
+plt.show()
+
+
+
 # Fear Wave
 # --------------------------------------------------------------------
 # Calling Fear Wave
@@ -65,6 +157,8 @@ C          = librosa.feature.chroma_cqt(y=y_harmonic, sr=44100)
 # Fear Wave Visualization
 librosa.display.waveplot(data, sr=sample_rate)
 plt.title("Fear Wave")
+plt.ylim([-1.5, 1.5])
+plt.xlim([0, 6])
 plt.show()
 
 librosa.display.specshow(mfcc, x_axis='time')
@@ -89,6 +183,98 @@ librosa.display.specshow(C, x_axis='time')
 plt.ylabel('C')
 plt.colorbar()
 plt.title("Fear Wave")
+plt.show()
+
+
+# Happiness Wave
+# --------------------------------------------------------------------
+# Calling Happiness Wave
+hname = SAVEE_DC + 'h11.wav'
+data, sample_rate        = librosa.load(hname)
+y_harmonic, y_percussive = librosa.effects.hpss(data)
+pitches, magnitudes      = librosa.core.pitch.piptrack(y=data, sr=sample_rate)
+
+# Happiness Wave feature
+mfcc       = librosa.feature.mfcc(y=data, sr=sample_rate, n_mfcc=13)    
+pitches    = pitches
+magnitudes = magnitudes
+C          = librosa.feature.chroma_cqt(y=y_harmonic, sr=44100)  
+
+# Happiness Wave Visualization
+librosa.display.waveplot(data, sr=sample_rate)
+plt.title("Happiness Wave")
+plt.ylim([-1.5, 1.5])
+plt.xlim([0, 6])
+plt.show()
+
+librosa.display.specshow(mfcc, x_axis='time')
+plt.ylabel('MFCC')
+plt.colorbar()
+plt.title("Happiness Wave")
+plt.show()
+
+librosa.display.specshow(pitches, x_axis='time')
+plt.ylabel('Pitches')
+plt.colorbar()
+plt.title("Happiness Wave")
+plt.show()
+
+librosa.display.specshow(magnitudes, x_axis='time')
+plt.ylabel('Magnitudes')
+plt.colorbar()
+plt.title("Happiness Wave")
+plt.show()
+
+librosa.display.specshow(C, x_axis='time')
+plt.ylabel('C')
+plt.colorbar()
+plt.title("Happiness Wave")
+plt.show()
+
+
+# Neutral Wave
+# --------------------------------------------------------------------
+# Calling Neutral Wave
+nname = SAVEE_DC + 'n11.wav'
+data, sample_rate        = librosa.load(nname)
+y_harmonic, y_percussive = librosa.effects.hpss(data)
+pitches, magnitudes      = librosa.core.pitch.piptrack(y=data, sr=sample_rate)
+
+# Neutral Wave feature
+mfcc       = librosa.feature.mfcc(y=data, sr=sample_rate, n_mfcc=13)    
+pitches    = pitches
+magnitudes = magnitudes
+C          = librosa.feature.chroma_cqt(y=y_harmonic, sr=44100)  
+
+# Neutral Wave Visualization
+librosa.display.waveplot(data, sr=sample_rate)
+plt.title("Neutral Wave")
+plt.ylim([-1.5, 1.5])
+plt.xlim([0, 6])
+plt.show()
+
+librosa.display.specshow(mfcc, x_axis='time')
+plt.ylabel('MFCC')
+plt.colorbar()
+plt.title("Neutral Wave")
+plt.show()
+
+librosa.display.specshow(pitches, x_axis='time')
+plt.ylabel('Pitches')
+plt.colorbar()
+plt.title("Neutral Wave")
+plt.show()
+
+librosa.display.specshow(magnitudes, x_axis='time')
+plt.ylabel('Magnitudes')
+plt.colorbar()
+plt.title("Neutral Wave")
+plt.show()
+
+librosa.display.specshow(C, x_axis='time')
+plt.ylabel('C')
+plt.colorbar()
+plt.title("Neutral Wave")
 plt.show()
 
 
@@ -109,6 +295,8 @@ C          = librosa.feature.chroma_cqt(y=y_harmonic, sr=44100)
 # Sad wave Visualization
 librosa.display.waveplot(data, sr=sample_rate)
 plt.title("Sad Wave")
+plt.ylim([-1.5, 1.5])
+plt.xlim([0, 6])
 plt.show()
 
 librosa.display.specshow(mfcc, x_axis='time')
@@ -136,47 +324,51 @@ plt.title("Sad Wave")
 plt.show()
 
 
-# Angry Wave
+# Surprise Wave
 # --------------------------------------------------------------------
-# Calling Angry Wave
-aname = SAVEE_DC + 'a11.wav'
-data, sample_rate        = librosa.load(aname)
+# Calling Surprise Wave
+Suname = SAVEE_DC + 'su11.wav'
+data, sample_rate        = librosa.load(Suname)
 y_harmonic, y_percussive = librosa.effects.hpss(data)
 pitches, magnitudes      = librosa.core.pitch.piptrack(y=data, sr=sample_rate)
 
-# Angry Wave feature
+# Surprise wave feature
 mfcc       = librosa.feature.mfcc(y=data, sr=sample_rate, n_mfcc=13)    
 pitches    = pitches
 magnitudes = magnitudes
 C          = librosa.feature.chroma_cqt(y=y_harmonic, sr=44100)  
 
-# Angry Wave Visualization
+# Surprise wave Visualization
 librosa.display.waveplot(data, sr=sample_rate)
-plt.title("Angry Wave")
+plt.title("Surprise Wave")
+plt.ylim([-1.5, 1.5])
+plt.xlim([0, 6])
 plt.show()
 
 librosa.display.specshow(mfcc, x_axis='time')
 plt.ylabel('MFCC')
 plt.colorbar()
-plt.title("Angry Wave")
+plt.title("Surprise Wave")
 plt.show()
 
 librosa.display.specshow(pitches, x_axis='time')
 plt.ylabel('Pitches')
 plt.colorbar()
-plt.title("Angry Wave")
+plt.title("Surprise Wave")
 plt.show()
 
 librosa.display.specshow(magnitudes, x_axis='time')
 plt.ylabel('Magnitudes')
 plt.colorbar()
-plt.title("Angry Wave")
+plt.title("Surprise Wave")
 plt.show()
 
 librosa.display.specshow(C, x_axis='time')
 plt.ylabel('C')
 plt.colorbar()
-plt.title("Angry Wave")
+plt.title("Surprise Wave")
 plt.show()
+
+
 
 
