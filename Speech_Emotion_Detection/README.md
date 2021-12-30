@@ -37,12 +37,12 @@ The code where the models' performance evaluation was done by introducing unknow
 
 # -------------------------------------------------------------------
 
-# 1- The dataset
+# 1.a The dataset
 ![Test Image 2](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/DataFrame.png)
 Using SAVEE Database, speech emotion annotated data for emotion recognition systems, from
 https://www.kaggle.com/barelydedicated/savee-database.
 
-# 2-  Extracting 65 features for each audio
+# 1.b  Extracting 65 features for each audio
 ![Test Image 3](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/new_features.png)
 
 1- Reading audio waves by using [Librosa](https://librosa.org/doc/latest/index.html) which is a python package for music and audio analysis. It provides the building blocks necessary to create audio information retrieval systems.
@@ -62,7 +62,7 @@ https://www.kaggle.com/barelydedicated/savee-database.
 - C: it gives 12 feature for each audio.
 
 
-# 3- EDA Exploratory data analysis
+# 2- EDA Exploratory data analysis
 
 [Exploratory data analysis](https://en.wikipedia.org/wiki/Exploratory_data_analysis) step is to identify missing data, explore data type, visualize the data before applying any analysis to it, look at data distribution, mean and standard deviation, and etc.
 
@@ -73,10 +73,10 @@ https://www.kaggle.com/barelydedicated/savee-database.
 2- Exploring total waves for each emotion: the neutral emotion has 120 waves in dataset and 60 waves for each other emotions.
 
 
-# 4- Splitting the data frame
+# 3.a Splitting the data frame
 Dividing the dataset into 3 data frame Training, Validation and Testing. The Validation data frame provided an unbiased evaluation of a model fit on the training data frame. 
 
-# 5- Creating and evaluating the models
+# 3.b Creating and evaluating the models
 ![Test Image 5](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/result.png)
 # Machine Learning: 
 The following are the steps that I used to create and evaluate the Machine Learning model:
@@ -113,7 +113,7 @@ The following are the steps that I used to create and evaluate the Deep Learning
 
 7- Result: the accuracy score range by using Training, Validation, and Testing Data frame is from 52.78% up to 86.97%. 
 
-# 6- Testing the models’ performance
+# 4- Testing the models’ performance
 ![Test Image 6](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/test.png)
 Using a new angry wave from CREMA dataset to test the models’ performance:
 
@@ -121,4 +121,4 @@ Using a new angry wave from CREMA dataset to test the models’ performance:
 
 2- For The Deep Learning Model: the model predicted that the wave was 98% as an angry wave.
  
-# 7- Future work
+# 5- Future work
