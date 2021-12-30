@@ -39,8 +39,7 @@ The code where the models' performance evaluation was done by introducing unknow
 
 # 1.a The dataset
 ![Test Image 2](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/DataFrame.png)
-Using SAVEE Database, speech emotion annotated data for emotion recognition systems, from
-https://www.kaggle.com/barelydedicated/savee-database.
+Using [SAVEE Database](https://www.kaggle.com/barelydedicated/savee-database), speech emotion annotated data for emotion recognition systems.
 
 # 1.b  Extracting 65 features for each audio
 ![Test Image 3](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/new_features.png)
@@ -120,7 +119,7 @@ The following are the steps that I used to create and evaluate the Deep Learning
 
 # 4- Testing the models’ performance
 ![Test Image 6](https://github.com/AMMAshi/AMMAshi-Saudi-Digital-Academy---Data-Science-Immersive---Bootcamps/blob/master/Speech_Emotion_Detection/images/test.png)
-Using a new angry wave from CREMA dataset to test the models’ performance:
+Using a new angry wave from [CREMA dataset](https://www.kaggle.com/ejlok1/cremad) to test the models’ performance:
 
 1- For The Machine Learning Model: the model predicted that the wave was an angry wave.
 
