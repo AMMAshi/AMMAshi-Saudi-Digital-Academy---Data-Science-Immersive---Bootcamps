@@ -148,7 +148,7 @@ df['source'] = 'SAVEE'
 df           = pd.concat([df, pd.DataFrame(path, columns = ['path'])], axis = 1)
 #print(df.emotion.value_counts())
 #print(df.head())
-
+#print(df.info())
 
 # Feature
 # --------------------------------------------------------------------
@@ -176,12 +176,12 @@ for index,path in enumerate(df.path):
     
     # The feature
     # ------------------------------------------------------
-    # mfccs has 13 feature 
+    # mfccs has 30 feature 
     mfccs      = np.mean(librosa.feature.mfcc(y=X, sr=sample_rate, n_mfcc=13), axis=1) # <<< axis = 1 Original axis = 0
     # taking only the 20 first value of the audio
-    pitches    = np.trim_zeros(np.mean(pitches,axis=1))[:20]
+    pitches    = np.trim_zeros(np.mean(pitches,axis=1))#[:20]
     # taking only the 20 first value of the audio
-    magnitudes = np.trim_zeros(np.mean(magnitudes, axis=1))[:20]
+    magnitudes = np.trim_zeros(np.mean(magnitudes, axis=1))#[:20]
     # C has 12 feature 
     C          = np.mean(librosa.feature.chroma_cqt(y=y_harmonic, sr=44100), axis=1)  
 
@@ -204,7 +204,7 @@ df8 = pd.concat([df7,pd.DataFrame(df4['feature'].values.tolist())],axis=1)
 # Replacing NAs with 0
 # --------------------------------------------------------------------
 df_Final = df8.fillna(0)
-# print(df.shape)
+# print(df_Final.shape)
 # print(df_Final[:5])
 
 
